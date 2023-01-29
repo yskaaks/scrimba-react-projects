@@ -446,7 +446,11 @@ function App() {
         "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
-        cards
+        _react2.default.createElement(
+            "section",
+            { className: "cards-list" },
+            cards
+        )
     );
 }
 
@@ -543,12 +547,12 @@ function Card(props) {
         ),
         _react2.default.createElement(
             "p",
-            null,
+            { className: "card--title" },
             props.title
         ),
         _react2.default.createElement(
             "p",
-            null,
+            { className: "card--price" },
             _react2.default.createElement(
                 "span",
                 { className: "bold" },
@@ -656,6 +660,90 @@ exports.default = [{
     },
     location: "Online",
     openSpots: 27
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
+}, {
+    id: 3,
+    title: "Group Mountain Biking",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 50,
+    coverImg: "mountain-bike.png",
+    stats: {
+        rating: 4.8,
+        reviewCount: 2
+    },
+    location: "Norway",
+    openSpots: 3
 }, {
     id: 3,
     title: "Group Mountain Biking",
