@@ -417,28 +417,11 @@ var _data2 = _interopRequireDefault(_data);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
-Challenge:
-
-- import the array of data from data.js
-- map over the array to create <Card /> components
-- display the array of card components under the navbar
-  (in place of the current <Card /> component)
-
-Note: We haven't styled the group of components yet, so they'll
-still be block elements, stacked vertically. We'll add styling later.
-*/
-
 function App() {
-    // <Hero />
     var cards = _data2.default.map(function (item) {
         return _react2.default.createElement(_Card2.default, {
-            img: item.coverImg,
-            rating: item.stats.rating,
-            reviewCount: item.stats.reviewCount,
-            location: item.location,
-            title: item.title,
-            price: item.price
+            key: item.id,
+            item: item
         });
     });
 
@@ -446,6 +429,7 @@ function App() {
         "div",
         null,
         _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(_Hero2.default, null),
         _react2.default.createElement(
             "section",
             { className: "cards-list" },
@@ -519,10 +503,23 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Card(props) {
+    console.log(props);
+    var badgeText = void 0;
+    if (props.item.openSpots === 0) {
+        badgeText = "Sold out";
+    } else if (props.item.location === "Online") {
+        badgeText = "Online";
+    }
+
     return _react2.default.createElement(
         "div",
         { className: "card" },
-        _react2.default.createElement("img", { src: "../images/" + props.img, className: "card--image" }),
+        badgeText && _react2.default.createElement(
+            "div",
+            { className: "card--badge" },
+            badgeText
+        ),
+        _react2.default.createElement("img", { src: "../images/" + props.item.coverImg, className: "card--image" }),
         _react2.default.createElement(
             "div",
             { className: "card--stats" },
@@ -530,25 +527,25 @@ function Card(props) {
             _react2.default.createElement(
                 "span",
                 null,
-                props.rating
+                props.item.stats.rating
             ),
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
                 "(",
-                props.reviewCount,
+                props.item.stats.reviewCount,
                 ") \u2022 "
             ),
             _react2.default.createElement(
                 "span",
                 { className: "gray" },
-                props.location
+                props.item.location
             )
         ),
         _react2.default.createElement(
             "p",
             { className: "card--title" },
-            props.title
+            props.item.title
         ),
         _react2.default.createElement(
             "p",
@@ -557,7 +554,7 @@ function Card(props) {
                 "span",
                 { className: "bold" },
                 "From $",
-                props.price
+                props.item.price
             ),
             " / person"
         )

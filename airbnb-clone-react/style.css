@@ -36,8 +36,9 @@ section {
 }
 
 .hero--photo {
-    max-width: 400px;
+    max-width: 50%;
     align-self: center;
+    background-size: contain;
 }
 
 .hero--header {
@@ -64,6 +65,7 @@ section {
     /* ADD */
     flex-direction: column;
     /* ADD */
+    position: relative;
 }
 
 .card--image {
@@ -90,4 +92,14 @@ section {
 /* ADD */
 .card--price {
     margin-top: auto;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
